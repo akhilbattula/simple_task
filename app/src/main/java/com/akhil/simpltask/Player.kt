@@ -10,8 +10,9 @@ class Player(s: String, arrayList: ArrayList<Int>) {
 
     fun getScore(): Int{
 
-        val random = Random.nextInt(1,100);
+        val random = Random.nextInt(1,100)
         Log.e("akhill",""+random)
+
         if(random>=1 && random<=probsList[0]){
             return 0
         }else if(random>=(probsList[0]+1) && random<=probsList[1]){
@@ -29,16 +30,5 @@ class Player(s: String, arrayList: ArrayList<Int>) {
         }else{
             return 7
         }
-
-        /*var randomnumber = (Math.random() * 100).toInt()
-        var runs = 0
-        for (i in 0 until probsList.size) {
-            if (randomnumber - probsList[i] <= 0) {
-                runs = i
-                break
-            }
-            randomnumber -= probsList[i]
-        }
-        return runs*/
     }
 }
